@@ -1,28 +1,28 @@
 # Code-Sample
 As a B.tech student , we all dream to be in big companys and solve a real world problem at our own level , but in current senario all the companys including FAANG is doing mass layoffs. Mostly freshers are lossing the jobs , if company could predict that which employee wanted to work dedicatedly , it would we easy for them to decide which employee should be fired , so to solve this issue I have coded in python , "Employee Atrittion Prediction".
 # Importing all Library
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import confusion_matrix
-from sklearn import datasets
-from sklearn.metrics import accuracy_score
-from sklearn.metrics import plot_confusion_matrix 
-from sklearn.linear_model import LogisticRegression
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.naive_bayes import GaussianNB
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn import svm
-from sklearn.metrics import classification_report
-df=pd.read_csv(r"C:\Users\dushy\Downloads\WA_Fn-UseC_-HR-Employee-Attrition (1).csv") //dataset is of IBM , taken from kaggle.
-df.head()
-df.drop(0,inplace=True)
-df.isnull().sum()
-df.dropna(axis=0,inplace=True)
-#One Hot Encoding
+*import pandas as pd
+*import numpy as np
+*import matplotlib.pyplot as plt
+*import seaborn as sns
+*from sklearn.model_selection import train_test_split
+*from sklearn.metrics import confusion_matrix
+*from sklearn import datasets
+*from sklearn.metrics import accuracy_score
+*from sklearn.metrics import plot_confusion_matrix 
+*from sklearn.linear_model import LogisticRegression
+*from sklearn.tree import DecisionTreeClassifier
+*from sklearn.ensemble import RandomForestClassifier
+*from sklearn.naive_bayes import GaussianNB
+*from sklearn.neighbors import KNeighborsClassifier
+*from sklearn import svm
+*from sklearn.metrics import classification_report
+*df=pd.read_csv(r"C:\Users\dushy\Downloads\WA_Fn-UseC_-HR-Employee-Attrition (1).csv") //dataset is of IBM , taken from kaggle.
+*df.head()
+*df.drop(0,inplace=True)
+*df.isnull().sum()
+*df.dropna(axis=0,inplace=True)
+# One Hot Encoding
 def onehot_encode(df, column):
     df = df.copy()
     dummies = pd.get_dummies(df[column], prefix=column)
