@@ -1,6 +1,6 @@
 # Code-Sample
 As a B.tech student , we all dream to be in big companys and solve a real world problem at our own level , but in current senario all the companys including FAANG is doing mass layoffs. Mostly freshers are lossing the jobs , if company could predict that which employee wanted to work dedicatedly , it would we easy for them to decide which employee should be fired , so to solve this issue I have coded in python , "Employee Atrittion Prediction".
-#Importing all Library
+# Importing all Library
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -46,7 +46,7 @@ Yes     236
 Name: Attrition, dtype: int64
 sns.set_style('darkgrid')
 sns.countplot(x ='Attrition', data = df)
-#Model Used
+# Model Used
 lr=LogisticRegression(C = 0.1, random_state = 42, solver = 'liblinear')
 dt=DecisionTreeClassifier()
 rm=RandomForestClassifier()
@@ -77,14 +77,14 @@ model_scores={'Logistic Regression':lr.score(X_test,y_test),
               'Naive Bayes':gnb.score(X_test,y_test)
              }
 model_scores
-#Classification Report
+# Classification Report
 LOGISTIC REGRESSION: classification_report
 from sklearn.metrics import classification_report
 
 lr_y_preds = lr.predict(X_test)
 
 print(classification_report(y_test,lr_y_preds))
-#confusion_matrix
+# confusion_matrix
 lr=LogisticRegression()
 lr.fit(X_train,y_train)
 disp=plot_confusion_matrix(lr,X_train,y_train,cmap="Blues",values_format='3g')
